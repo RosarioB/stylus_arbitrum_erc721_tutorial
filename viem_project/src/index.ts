@@ -1,17 +1,14 @@
 import "dotenv/config";
 import {
-  createPublicClient,
   createWalletClient,
-  getContract,
   http,
   publicActions,
   parseAbi,
-  formatEther,
 } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { arbitrumSepolia } from "viem/chains";
 
-const ERC721_ADDRESS = "0x405a199a637b246575483c94d6e5f1de5a5e3e6c"; // Arbitrum Sepolia
+const ERC721_ADDRESS = "0x405a199a637b246575483c94d6e5f1de5a5e3e6c";
 const WALLET_ADDRESS = "0x20c6F9006d563240031A1388f4f25726029a6368";
 
 const main = async () => {
@@ -33,7 +30,7 @@ const main = async () => {
     "function ownerOf(uint256 token_id) external view returns (address)",
   ]);
 
-  /* const receipt = await walletClient.writeContract({
+  const receipt = await walletClient.writeContract({
     address: ERC721_ADDRESS,
     abi: erc721Abi,
     functionName: "mintToken",
@@ -42,7 +39,7 @@ const main = async () => {
     account: account,
   });
 
-  console.log(`Receipt: ${receipt}`); */
+  console.log(`Receipt: ${receipt}`);
 
   const TOKEN_ID = 1n;
 
