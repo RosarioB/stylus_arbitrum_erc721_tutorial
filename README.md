@@ -1,4 +1,6 @@
 # stylus_arbitrum_erc721_tutorial
+This is the source code of this [Youtube video](https://www.youtube.com/watch?v=jEBY_U2scJc).
+
 The folder `stylus` containes the code code of the Stylus project to compile and deploy the smart contract.
 
 The folder `viem_project` contains a Node.js project with Typescript and viem to interact with the smart contract.
